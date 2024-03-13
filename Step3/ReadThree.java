@@ -12,16 +12,16 @@ public class ReadThree
         try{
             System.out.print("Writing to file ... ");
             // Create the file to write to
-            PrintWriter fileOut = new PrintWriter("output.txt");
+            PrintWriter fileOut = new PrintWriter("Step3/output.txt");
             // Write text just like we would to the console
-            fileOut.println("Hello ");
+            fileOut.println("Hello, Zip code\nRocks!!!\n");
             // Clode out file
             fileOut.close();  
 
             System.out.println("Done!");
             
             // Read in file to verify it
-            Scanner fileIn = new Scanner(new File("output.txt"));
+            Scanner fileIn = new Scanner(new File("Step3/output.txt"));
             
             System.out.println("Reading from file ... ");
             while (fileIn.hasNext()) 

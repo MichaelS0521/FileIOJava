@@ -12,19 +12,21 @@ public class ReadOne
         try {
             // Create the Scanner object using the file
             // as input
-            Scanner fileIn = new Scanner(new File("input.txt"));
+            File file = new File("/Users/michael/Desktop/Projects/FileIOJava/Step1/input.txt");
+            Scanner fileIn = new Scanner(file);
             
             /* Loop while the file still has lines.
              * .hasNext() looks to see if a line exists
              * but it doesn't read the line.
              */
-            while (fileIn.hasNext()) 
+            while (fileIn.hasNextLine())
             {
                 // Reads the entire line
                 String lineIn = fileIn.nextLine(); 
                 // Output the line
                 System.out.println(lineIn);
             }
+            fileIn.close();
         }
         catch (IOException e) {
             System.out.println("File not found");
